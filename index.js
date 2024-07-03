@@ -24,7 +24,7 @@ const start = () => {
   try {
     connectDB(process.env.MONGO_URI)
     return app.listen(port, () =>
-      console.log(`Server is listening on port ${port}...`),
+      console.log(`Server started on port: ${port}...`),
     )
   } 
   catch (error) {
