@@ -14,7 +14,7 @@ app.use(cors())
 app.use(helmet())
 app.use(xss())
 
-const port = process.env.PORT || 4444;
+const port = process.env.PORT || 4444
 
 app.get('/tags', getTags)
 app.use('/auth', authRouter)

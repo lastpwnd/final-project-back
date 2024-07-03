@@ -35,8 +35,8 @@ export const getOnePost = async (req, res) => {
 
 export const getTags = async (req, res) => {
     try {
-        const posts = await Post.find().limit(5)
-        const tags = posts.map( post => post.tags ).flat().slice(0,9)
+        const posts = await Post.find()
+        const tags = posts.map( post => post.tags ).flat().slice()
         res.json(tags)
         
     } catch (error) {
